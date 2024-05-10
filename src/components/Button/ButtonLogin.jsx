@@ -1,9 +1,17 @@
 import React from "react";
 import LoginButton from "./styled";
 
-export const ButtonLogin = ({ text, textColor, backgroundColor }) => {
+export const ButtonLogin = ({ text, textColor, backgroundColor, onClick }) => {
+  const handleClick = () => {
+    onClick();
+  };
+  
   return (
-    <LoginButton textColor={textColor} backgroundColor={backgroundColor}>
+    <LoginButton
+      onClick={handleClick}
+      textColor={textColor}
+      backgroundColor={backgroundColor}
+    >
       {text}
     </LoginButton>
   );

@@ -37,6 +37,8 @@ export default createGlobalStyle`
 
     overflow-x: hidden;
     overflow-y: overlay;
+
+    transition: ease all 1s;
   }
 
   body, input, button, textarea {
@@ -88,4 +90,6 @@ a{
   ::-webkit-scrollbar-thumb:hover {
     background: #fff;
   }
+
+  
 `;

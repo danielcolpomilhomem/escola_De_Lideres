@@ -5,8 +5,9 @@ const InputContainer = styled.div`
   flex-direction: column;
   margin-bottom: 10px;
   width: 85%;
-  height: 8rem;
+  height: 7.5rem;
   position: relative; 
+  margin-top: 1%;
 `;
 
 const Label = styled.label`

@@ -1,13 +1,17 @@
 import React from "react";
-import LoginModal from "./styled";
+import {LoginPageModal} from "./styled";
 import { InputComponent } from "../Input/InputComponent";
 import { ButtonLogin } from "../Button/ButtonLogin";
 
-export const LoginComponent = () => {
+const LoginComponent = ({ onForgotPasswordClick }) => {
+
+  const handleForgotPasswordClick = () => {
+    onForgotPasswordClick("RecoveryComponent");
+  };
   return (
-    <LoginModal>
-      <h2>Login</h2>
+    <LoginPageModal>
       <form action="">
+      <h2>Login</h2>
         <InputComponent label={"Usuário"} placeholder={"nome@exemplo.com"} />
         <InputComponent
           type={"password"}
@@ -33,8 +37,11 @@ export const LoginComponent = () => {
         <ButtonLogin
           textColor={"#2849d9"}
           text={"Esqueci minha senha"}
-        ></ButtonLogin>
+          onClick={handleForgotPasswordClick}
+        />
       </form>
-    </LoginModal>
+    </LoginPageModal>
   );
 };
+
+export default LoginComponent; 

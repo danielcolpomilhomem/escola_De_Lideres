@@ -1,17 +1,17 @@
-import { LoginScreen } from "./App.js";
-import { LoginComponent } from "./components/LoginComponent/LoginComponent.jsx";
-import LogoEscola from "../src/assets/LogoEscola.svg";
+import LoginPage from "./pages/Login/LoginPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <LoginScreen>
-      <div
-        className="background-logo"
-        style={{ backgroundImage: `url(${LogoEscola})` }}
-      ></div>
-
-      <LoginComponent />
-    </LoginScreen>
+    <>
+      <GlobalStyles />
+      <Router>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

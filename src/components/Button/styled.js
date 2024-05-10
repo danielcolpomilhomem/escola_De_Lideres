@@ -6,7 +6,8 @@ import styled from 'styled-components';
 
 const LoginButton = styled.div`
   width: 85%;
-  height: 6rem;
+  margin-bottom: 2%;
+  height: 5.5rem;
   background-color: blue;
   color: ${props => props.textColor || 'black'};
   background-color: ${props => props.backgroundColor || 'white'};
