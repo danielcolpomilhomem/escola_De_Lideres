@@ -23,7 +23,8 @@ export const RecoveryComponent = ({ onReturnClick }) => {
   };
 
   return (
-    <LoginPageModal>
+    <LoginPageModal width="100%" height="100%" top="50%">
+
       <form action="">
       <h2>
         <button onClick={() => handleReturn("LoginComponent")}>
@@ -37,17 +38,8 @@ export const RecoveryComponent = ({ onReturnClick }) => {
           não lembre do e-mail que você cadastrou, clique no botão “Recuperar
           acesso” e siga os passos para recuperar sua conta.
         </h4>
-        <InputComponent label={"Usuário"} placeholder={"nome@exemplo.com"} />
-        <div className="check-container">
-          <input
-            type="checkbox"
-            id="scales"
-            name="scales"
-            style={{ width: "20px", height: "20px" }}
-          />
-          <h4>Entrar Automaticamente</h4>
-        </div>
-
+        <InputComponent label={"Usuário"} placeholder={"nome@exemplo.com"} type={"email"} />
+       
         <ButtonLogin
           backgroundColor="#2849d9"
           textColor="white"

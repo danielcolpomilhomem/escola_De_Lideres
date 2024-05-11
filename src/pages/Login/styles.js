@@ -10,7 +10,9 @@ export const LoginScreen = styled.div`
     max-width: 1920px;
     height: 100vh;
     max-height: 1080px;
+
     background-color: #f6f8f9;
+
     background-image: url(${borderDown});
     background-size: contain;
     background-repeat: no-repeat;
@@ -24,5 +26,21 @@ export const LoginScreen = styled.div`
     position: absolute;
     left: 16%;
     top: 15%;
-}
+    }   
+    @media screen and (max-width: 500px) {
+
+        width: 100vw;
+        height: 100vh;
+        background-position: bottom;
+
+        .background-logo {
+            position: absolute;
+            width: 50vw;
+            height: 50vh;
+            background-size: contain;
+            top: 33%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 `;

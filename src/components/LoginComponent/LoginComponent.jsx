@@ -12,7 +12,7 @@ const LoginComponent = ({ onForgotPasswordClick }) => {
     <LoginPageModal>
       <form action="">
       <h2>Login</h2>
-        <InputComponent label={"Usuário"} placeholder={"nome@exemplo.com"} />
+        <InputComponent label={"Usuário"} placeholder={"nome@exemplo.com"} type={'email'} />
         <InputComponent
           type={"password"}
           label={"Senha"}

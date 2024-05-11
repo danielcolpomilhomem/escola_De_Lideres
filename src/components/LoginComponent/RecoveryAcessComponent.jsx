@@ -22,7 +22,7 @@ export const RecoveryAcessComponent = ({ onReturnClick }) => {
   };
 
   return (
-    <LoginPageModal>
+    <LoginPageModal width="100%" height="100%" top="50%">
       <form action="">
         <h2>
           <button onClick={handleReturn}>
@@ -40,16 +40,19 @@ export const RecoveryAcessComponent = ({ onReturnClick }) => {
         <InputComponent
           label={"Data de nascimento"}
           placeholder={"Digite aqui"}
+          type={"date"}
         />
 
         <InputComponent
           label={"Telefone para contato"}
           placeholder={"Digite aqui"}
+          type={"tel"}
         />
 
         <InputComponent
           label={"Email para Contato"}
           placeholder={"Digite aqui"}
+          type={"email"}
         />
 
         <ButtonLogin

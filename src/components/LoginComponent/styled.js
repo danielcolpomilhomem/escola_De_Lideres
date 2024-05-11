@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const LoginPageModal = styled.div`
   background-color: white;
@@ -14,7 +14,16 @@ export const LoginPageModal = styled.div`
   align-items: center;
   justify-content: center;
   
+  
   form{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     h2{
       font-weight: bold;
       margin-bottom: 5%;
@@ -23,6 +32,12 @@ export const LoginPageModal = styled.div`
       justify-content: center;
       position: relative;
       width: 85%;
+
+      @media screen and (max-width: 500px) {
+        width: 100%;
+
+      }
+
       button{
         display: flex;
         align-items: center;
@@ -34,13 +49,7 @@ export const LoginPageModal = styled.div`
         cursor: pointer;
       }
     }
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 1%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
 
     h4{
       color: var(--color-text-in-primary);
@@ -48,6 +57,10 @@ export const LoginPageModal = styled.div`
       width: 85%;
       text-align: start;
       margin-bottom: 1%;
+      @media screen and (max-width: 500px) {
+        width: 90%;
+        margin-bottom: 5%;
+      }
     }
 
     .check-container{
@@ -65,6 +78,18 @@ export const LoginPageModal = styled.div`
 
     }
 
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    height: 58%;
+    top: 60%; 
+    width:${props => props.width};
+    height:${props => props.height};
+    top:${props => props.top};
+    right: 50%;
+    transform: translate(50%, -50%);
+    position: absolute;
+    
+  }
     
 `;
 
@@ -99,7 +124,10 @@ export const ModalStyle = styled.div`
     align-self: flex-end;
   }
 
-
+  @media screen and (max-width: 500px) {
+    width: 90%; 
+    height: auto; 
+  }
 
 `
 

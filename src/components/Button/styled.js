@@ -1,9 +1,6 @@
 
 import styled from 'styled-components';
 
-
-
-
 const LoginButton = styled.div`
   width: 85%;
   margin-bottom: 2%;
@@ -18,7 +15,14 @@ const LoginButton = styled.div`
   align-items: center;
   border-radius: 2px;
   cursor: pointer;
-  
+
+
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+    height: 2.5rem;
+    width: 90%;
+  }
+
 `;
 
 export default LoginButton;

@@ -55,10 +55,20 @@ export default createGlobalStyle`
   p{
     font-size: 18px;
   }
-      @media (max-width: 500px) {
-    p{
-      font-size: 16px;
-    }
+     @media (max-width: 500px) {
+
+      h2{
+        font-size: 28px !important;
+      }
+      h4{
+        font-size: 18px !important;
+
+      }
+      p{
+        font-size: 16px;
+      }
+
+
     }
 a{
   text-decoration: none;
