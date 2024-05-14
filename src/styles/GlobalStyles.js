@@ -5,9 +5,11 @@ export default createGlobalStyle`
     --color-text: #b2b5b7;
     --color-text-white: #6a6d6f;
     --color-border: #6a6d6f;
+    --color-background-dash:#f8f9ff;
     --color-text-in-primary: #000000;
-    --color-background-white-mode: #FFFFFF 
-
+    --color-background-white-mode: #FFFFFF;
+    --color-active: #b3c1ff;
+    --color-background-active:#3358ff;
     font-size: 60%;   
   }
 
