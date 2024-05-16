@@ -8,10 +8,9 @@ export const Container = styled.div`
   flex-direction: column;
       background-color: var(--color-background-active);
 
-  width: 253px;
-  height: 253px;
-  border-radius: 8px;
-  margin-left: 1rem;
+  width: 260px;
+  height: 260px;
+  border-radius: 16px;
 
   .title{
     width: 100%;

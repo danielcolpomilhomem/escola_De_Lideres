@@ -19,11 +19,22 @@ export default Screen = styled.div`
     height: 100vh;
     display: grid;
     padding: 1%;
-    grid-template-columns: 70% 30%;
-    align-items: center;
-    justify-content: center;
+    gap: 2rem;
+    grid-template-columns: 80% 18%;
+    align-items: start;
+    justify-content: start;
     overflow-y: auto;
+    overflow-x: hidden;
+    justify-items: end;
   }
+
+  @media (max-width: 1590px) {
+    .content-side-dash {
+      grid-template-columns: auto auto;
+      justify-content: space-evenly;
+    }
+  }
+
   .content-side-tracks {
     width: 100%;
     height: 100vh;
@@ -54,7 +65,7 @@ export default Screen = styled.div`
     }
   }
 
-  .bottom-div{
+  .bottom-div {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -63,16 +74,16 @@ export default Screen = styled.div`
     width: 75%;
     height: 100%;
     display: flex;
-  flex-direction: column;
+    flex-direction: column;
 
     .ativity-projects {
-        padding:1.2rem;
+      padding: 1.2rem;
       display: flex;
       flex-direction: column;
       align-items: start;
-        width: 100%;
+      width: 100%;
 
-        margin-bottom: 2rem;
+      margin-bottom: 2rem;
       .title {
         width: 100%;
         height: 35px;
@@ -88,19 +99,49 @@ export default Screen = styled.div`
         background-color: var(--color-background-white-mode);
         border-radius: 15px;
         padding: 0rem 1.5rem;
-        
-        .actvity{
+
+        .main-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          text-align: start;
+          gap: 10px;
+          .text-span {
             width: 100%;
-            height: 50px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: start;
+            text-align: start;
+            margin-bottom: 12px;
+            margin-left: 35px;
+          }
+        }
+        .actvity {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            svg {
+              transition: transform 0.3s ease-in-out;
+              ${(props) =>
+                props.expanded &&
+                css`
+                  transform: rotate(180deg);
+                `}
+            }
+          }
         }
       }
     }
   }
-  .bottom-div-right{
+  .bottom-div-right {
     width: 25%;
     height: 100%;
     display: flex;
@@ -108,11 +149,11 @@ export default Screen = styled.div`
     justify-content: center;
 
     .suport-material {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        margin: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      margin: 1.2rem;
       .title {
         width: 100%;
         height: 35px;
@@ -120,7 +161,6 @@ export default Screen = styled.div`
         font-weight: bold;
       }
       .suport-container {
-        
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -129,14 +169,14 @@ export default Screen = styled.div`
         border-radius: 15px;
         padding: 0rem 1.5rem;
         background-color: var(--color-background-white-mode);
-        .suport{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            gap: 15px;
-            flex-direction: row;
-            align-items: center;
-            justify-content: start;
+        .suport {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          gap: 15px;
+          flex-direction: row;
+          align-items: center;
+          justify-content: start;
         }
       }
     }

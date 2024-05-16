@@ -1,4 +1,6 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+
 import {
   AiFillHome,
   AiFillSetting,
@@ -28,10 +30,11 @@ import {
 } from "./styled";
 
 const AsideMenu = () => {
-  const [selectedButton, setSelectedButton] = React.useState(null);
+  const location = useLocation();
 
-  const handleButtonClick = (buttonName) => {
-    setSelectedButton(buttonName);
+
+  const isButtonActive = (route) => {
+    return location.pathname === route;
   };
 
   return (
@@ -45,55 +48,37 @@ const AsideMenu = () => {
         <UserLevel>Nível 2</UserLevel>
       </UserProfile>
       <ButtonsContainer>
-        <MenuButton
-          selected={selectedButton === "meuAprendizado"}
-          onClick={() => handleButtonClick("meuAprendizado")}
-        >
+        <MenuButton to="/dashboard" selected={isButtonActive("/dashboard")}>
           <IconWrapper>
             <PiStudent size={24} />
           </IconWrapper>
           <ButtonTitle>Meu aprendizado</ButtonTitle>
         </MenuButton>
-        <MenuButton
-          selected={selectedButton === "trilhas"}
-          onClick={() => handleButtonClick("trilhas")}
-        >
+        <MenuButton to="/tracks" selected={isButtonActive("/tracks")}>
           <IconWrapper>
             <PiBezierCurveBold size={24} />
           </IconWrapper>
           <ButtonTitle>Trilhas</ButtonTitle>
         </MenuButton>
-        <MenuButton
-          selected={selectedButton === "calendario"}
-          onClick={() => handleButtonClick("calendario")}
-        >
+        <MenuButton >
           <IconWrapper>
             <AiOutlineCalendar size={24} />
           </IconWrapper>
           <ButtonTitle>Calendário</ButtonTitle>
         </MenuButton>
-        <MenuButton
-          selected={selectedButton === "anotacoes"}
-          onClick={() => handleButtonClick("anotacoes")}
-        >
+        <MenuButton >
           <IconWrapper>
             <AiOutlineFileText size={24} />
           </IconWrapper>
           <ButtonTitle>Anotações</ButtonTitle>
         </MenuButton>
-        <MenuButton
-          selected={selectedButton === "atividades"}
-          onClick={() => handleButtonClick("atividades")}
-        >
+        <MenuButton>
           <IconWrapper>
             <AiOutlineOrderedList size={24} />
           </IconWrapper>
           <ButtonTitle>Atividades</ButtonTitle>
         </MenuButton>
-        <MenuButton
-          selected={selectedButton === "sair"}
-          onClick={() => handleButtonClick("sair")}
-        >
+        <MenuButton >
           <IconWrapper>
             <IoIosLogOut size={24} />
           </IconWrapper>

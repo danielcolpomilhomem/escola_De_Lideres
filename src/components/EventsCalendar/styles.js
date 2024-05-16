@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-    width: 778px;
+    width: 100%;
     height: auto;
-      margin-top: 1rem;
       padding: 1rem;
-background-color: var(--color-background-white-mode);
-border-radius: 5px;
+      background-color: var(--color-background-white-mode);
+
+border-radius: 16px;
+
+
+
+
+
     .title-container{
         width: 100%;
         height: 55px;
@@ -53,6 +58,14 @@ border-radius: 5px;
                 align-items: center;
                 padding-left: 3rem;
                 background-color: var(--color-text);
+                gap: 1%;
+                .hours{
+                    color: #64686f;
+                }
+                .time{
+                    color: black;
+                    font-weight: 500;
+                }
             }
         }
     }

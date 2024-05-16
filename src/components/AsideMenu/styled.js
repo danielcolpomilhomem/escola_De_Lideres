@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const AsideContainer = styled.aside`
   display: flex;
@@ -44,16 +45,18 @@ export const ButtonsContainer = styled.div`
   flex-grow: 1;
 `;
 
-export const MenuButton = styled.button`
+export const MenuButton = styled(Link)`
   display: flex;
+  z-index: 1000;
   align-items: center;
   padding: 10px 15px;
   margin: 5px 0;
   background-color: ${({ selected }) => (selected ? ' var(--color-active)' : 'transparent')};
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
+  color: black;
 
   &:hover {
     background-color: var(--color-active);
@@ -64,9 +67,10 @@ export const IconWrapper = styled.div`
   margin-right: 10px;
 `;
 
-export const ButtonTitle = styled.span`
+export const ButtonTitle = styled.div`
   font-size: 16px;
   font-weight: bold;
+  color: black;
 `;
 
 export const Logo = styled.div`

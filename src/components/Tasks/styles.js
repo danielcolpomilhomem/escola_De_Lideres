@@ -2,15 +2,13 @@ import styled from "styled-components";
 
 export const TasksContainer = styled.div`
     width: 260px;
-    height: 750px;
     
-    margin: 1rem;
-    border-radius: 15px;
     padding: 2rem;
+    border-radius: 16px;
     display: flex;
     gap: 12px;
+    
     flex-direction: column;
-
     background-color: var(--color-background-white-mode);
 
 

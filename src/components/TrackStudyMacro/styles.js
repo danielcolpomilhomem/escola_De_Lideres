@@ -5,22 +5,24 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 256px;
+  height: 260px;
   gap: 1rem;
-  justify-content: center;
+  justify-content: start;
   height: auto;
+  width: 100%;
 `;
 
 const StudyComponent = styled.div`
-  width: 253px;
-  height: 253px;
+  width: 260px;
+  height: 260px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
   background-color: white;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 25px;
+  border-radius: 16px;
 
   h4{
     color: var(--color-text-white);
