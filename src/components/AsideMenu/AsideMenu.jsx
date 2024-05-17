@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +11,8 @@ import {
   AiOutlineOrderedList,
   AiOutlineLogout,
 } from "react-icons/ai";
+import { RxDoubleArrowLeft } from "react-icons/rx";
+
 import { PiStudent } from "react-icons/pi";
 import { PiBezierCurveBold } from "react-icons/pi";
 import { IoIosLogOut } from "react-icons/io";
@@ -45,8 +47,34 @@ const AsideMenu = () => {
     navigate("/login");
   };
 
+  const [propsAside, setPropsAside] = useState("0%");
+
+  const handleClick = () => {
+    setPropsAside(propsAside === "0%" ? "-60%" : "0%");
+  };
+
+  if (window.innerWidth <= 500) {
+    useEffect(() => {
+      console.log("teste");
+      setPropsAside("-60%");
+    }, [location.pathname]);
+  }
+
   return (
-    <AsideContainer>
+    <AsideContainer
+      style={{
+        left: `${propsAside}`,
+      }}
+    >
+      <button
+        onClick={handleClick}
+        className="button-reveal"
+        style={{
+          transform: propsAside === "-60%" ? "rotate(180deg)" : "rotate(0)",
+        }}
+      >
+        <RxDoubleArrowLeft />
+      </button>
       <UserProfile>
         <UserImage
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgBuQj7NlL1CFHmLsio8yL7fCNAVCR5-ZX5JS7X0JoUqqvUQt9_TH0_JdVmi2bFk83IrE&usqp=CAU"

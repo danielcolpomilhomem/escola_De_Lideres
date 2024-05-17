@@ -14,7 +14,7 @@ const InputContainer = styled.div`
   @media screen and (max-width: 500px) {
     width: 90%;
     height: 4.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -35,7 +35,6 @@ const Input = styled.input`
   height: 5.2rem;
   @media screen and (max-width: 500px) {
     font-size:18px;
-
   }
 `;
 
@@ -55,8 +54,8 @@ const IconPass = styled.div`
 
 
   @media screen and (max-width: 500px) {
-    width: 2rem;
-    height: 4rem;
+    width: 3rem;
+    height: 7rem;
   }
 
   

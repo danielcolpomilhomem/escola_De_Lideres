@@ -36,8 +36,8 @@ export const InputComponent = ({ label, type, placeholder, onChange, ...rest }) 
   };
 
   const validatePhone = (phone) => {
-    const regex = /^\d{10}$/; 
-    return regex.test(phone);
+
+    return (phone);
   };
 
   const validateDate = (date) => {

@@ -76,7 +76,10 @@ export const LoginPageModal = styled.div`
       }
     }
 
-    }
+      @media screen and (max-width: 500px) {
+        gap:1%
+      }
+  }
 
   @media screen and (max-width: 500px) {
     width: 90%;
@@ -111,8 +114,9 @@ export const LoginButton = styled.button`
 
   @media screen and (max-width: 500px) {
     font-size: 15px;
-    height: 2.5rem;
+    height: 3.5rem;
     width: 90%;
+
   }
 
 `;

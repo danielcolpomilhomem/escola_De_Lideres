@@ -33,4 +33,11 @@ export default Screen = styled.div`
       justify-content: space-evenly;
     }
   }
+ @media (max-width: 500px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
 `;

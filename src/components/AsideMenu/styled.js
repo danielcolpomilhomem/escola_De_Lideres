@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const AsideContainer = styled.aside`
   display: flex;
@@ -8,7 +8,43 @@ export const AsideContainer = styled.aside`
   padding: 50px 15px;
   background-color: #f8f9ff;
   height: 100vh;
+  left: none !important;
+  transition: ease 1s all;
 
+  .button-reveal {
+    display: "none";
+    border: none;
+  }
+
+  @media (max-width: 500px) {
+    position: absolute;
+    z-index: 1000;
+    width: 225px;
+
+    transition: ease 1s all;
+
+    .button-reveal {
+      background-color: #b3c1ff82;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      .hidden {
+        opacity: 0%;
+      }
+
+      svg {
+        transform: scale(2);
+      }
+    }
+  }
 `;
 
 export const UserProfile = styled.div`
@@ -51,7 +87,8 @@ export const MenuButton = styled(Link)`
   align-items: center;
   padding: 10px 15px;
   margin: 5px 0;
-  background-color: ${({ selected }) => (selected ? ' var(--color-active)' : 'transparent')};
+  background-color: ${({ selected }) =>
+    selected ? " var(--color-active)" : "transparent"};
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -82,5 +119,6 @@ export const Logo = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   height: 100px;
-  ${({ backgroundUrl }) => backgroundUrl && `background-image: url(${backgroundUrl});`}
+  ${({ backgroundUrl }) =>
+    backgroundUrl && `background-image: url(${backgroundUrl});`}
 `;
