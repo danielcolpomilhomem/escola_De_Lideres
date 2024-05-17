@@ -1,23 +1,15 @@
-import LoginPage from "./pages/Login/LoginPage";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import GlobalStyles from "./styles/GlobalStyles";
-import Dashboard from "./pages/DashboardElements/Dashboard";
-
-import Tracks from "./pages/DashboardElements/Tracks";
+import React, { useContext } from "react";
+import {AuthContext} from "./Contexts/AuthContext";
+import PrivateRoutes from "./Routes/private.routes";
+import PublicRoutes from "./Routes/public.routes";
 
 function App() {
+  const { auth, setAuth } = useContext(AuthContext);
+  console.log("auth", auth);
+
   return (
     <>
-      <GlobalStyles />
-      <Router>
-        <Routes>
-          <Route path="/" element={<LoginPage />} />
-
-          <Route path="/dashboard" element={<Dashboard />} />
-
-          <Route path="/tracks" element={<Tracks />} />
-        </Routes>
-      </Router>
+      {auth ? <PrivateRoutes /> : <PublicRoutes />}
     </>
   );
 }

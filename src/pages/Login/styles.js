@@ -7,10 +7,7 @@ export const LoginScreen = styled.div`
     align-items: center;
     justify-content: center;
     width: 100vw;
-    max-width: 1920px;
     height: 100vh;
-    max-height: 1080px;
-
     background-color: #f6f8f9;
 
     background-image: url(${borderDown});

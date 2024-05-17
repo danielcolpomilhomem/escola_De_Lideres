@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import {
   AiFillHome,
@@ -13,7 +14,7 @@ import {
 import { PiStudent } from "react-icons/pi";
 import { PiBezierCurveBold } from "react-icons/pi";
 import { IoIosLogOut } from "react-icons/io";
-
+import { AuthContext } from "../../Contexts/AuthContext";
 import LogoEscola from "../../assets/LogoEscola.svg";
 
 import {
@@ -32,9 +33,16 @@ import {
 const AsideMenu = () => {
   const location = useLocation();
 
+  const { auth, setAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const isButtonActive = (route) => {
     return location.pathname === route;
+  };
+
+  const handleLogout = () => {
+    setAuth(false);
+    navigate("/login");
   };
 
   return (
@@ -48,7 +56,7 @@ const AsideMenu = () => {
         <UserLevel>Nível 2</UserLevel>
       </UserProfile>
       <ButtonsContainer>
-        <MenuButton to="/dashboard" selected={isButtonActive("/dashboard")}>
+        <MenuButton to="/learning" selected={isButtonActive("/learning")}>
           <IconWrapper>
             <PiStudent size={24} />
           </IconWrapper>
@@ -60,13 +68,13 @@ const AsideMenu = () => {
           </IconWrapper>
           <ButtonTitle>Trilhas</ButtonTitle>
         </MenuButton>
-        <MenuButton >
+        <MenuButton>
           <IconWrapper>
             <AiOutlineCalendar size={24} />
           </IconWrapper>
           <ButtonTitle>Calendário</ButtonTitle>
         </MenuButton>
-        <MenuButton >
+        <MenuButton>
           <IconWrapper>
             <AiOutlineFileText size={24} />
           </IconWrapper>
@@ -78,7 +86,7 @@ const AsideMenu = () => {
           </IconWrapper>
           <ButtonTitle>Atividades</ButtonTitle>
         </MenuButton>
-        <MenuButton >
+        <MenuButton onClick={handleLogout}>
           <IconWrapper>
             <IoIosLogOut size={24} />
           </IconWrapper>
