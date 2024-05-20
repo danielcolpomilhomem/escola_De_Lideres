@@ -24,6 +24,17 @@ const StudyComponent = styled.div`
   padding: 10px 25px;
   border-radius: 16px;
 
+   @media (max-width: 500px) {
+    height:150px;
+
+    h2{
+      font-size: 15px !important;
+    }
+    p{
+      font-size: 12px !important;
+    }
+   }
+
   h4{
     color: var(--color-text-white);
   }

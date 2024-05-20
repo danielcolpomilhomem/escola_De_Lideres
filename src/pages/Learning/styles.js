@@ -13,6 +13,12 @@ export default Screen = styled.div`
   flex-direction: row;
   background-color: var(--color-background-dash);
 
+  
+  @media (max-width: 500px) {
+    overflow-x: hidden;
+  }
+  
+
   .content-side-dash {
     width: 100%;
     height: 100vh;
@@ -38,6 +44,11 @@ export default Screen = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+
+      .content-side-dash {
+        display: flex;
+        flex-direction: column;
+      }
   }
   
 `;

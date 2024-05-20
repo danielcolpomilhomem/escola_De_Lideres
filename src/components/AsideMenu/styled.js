@@ -12,19 +12,20 @@ export const AsideContainer = styled.aside`
   transition: ease 1s all;
 
   .button-reveal {
-    display: "none";
+    display: none;
     border: none;
+    transition: ease 300ms all;
   }
 
   @media (max-width: 500px) {
     position: absolute;
     z-index: 1000;
-    width: 225px;
+    width: 235px;
 
     transition: ease 1s all;
 
     .button-reveal {
-      background-color: #b3c1ff82;
+      background-color: white;
       width: 50px;
       height: 50px;
       position: absolute;
@@ -73,6 +74,10 @@ export const UserLevel = styled.h2`
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+
+  @media (max-width: 500px) {
+    font-size: 12px !important;
+  }
 `;
 
 export const ButtonsContainer = styled.div`

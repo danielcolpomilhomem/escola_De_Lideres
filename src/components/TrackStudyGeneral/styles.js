@@ -6,21 +6,21 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-      background-color: var(--color-background-active);
+  background-color: var(--color-background-active);
 
   width: 260px;
   height: 260px;
   border-radius: 16px;
 
-  .title{
+
+  .title {
     width: 100%;
-        margin-left: 4rem;
+    margin-left: 4rem;
 
     color: var(--color-background-white-mode);
   }
-  p{
-        color: var(--color-background-white-mode);
-
+  p {
+    color: var(--color-background-white-mode);
   }
 `;
 
@@ -28,8 +28,8 @@ export const InnerContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start; 
-  flex-direction: column; 
+  align-items: flex-start;
+  flex-direction: column;
 `;
 
 export const MiddleCircle = styled.div`
@@ -40,8 +40,8 @@ export const MiddleCircle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-    z-index: 500;
-  h2{
+  z-index: 500;
+  h2 {
     font-size: 34px;
     display: flex;
     color: var(--color-background-white-mode);
@@ -55,7 +55,7 @@ export const MiddleCircle = styled.div`
 `;
 
 export const ProgressSpinner = styled.div`
-  background: conic-gradient(${props => props.gradient});
+  background: conic-gradient(${(props) => props.gradient});
   width: 100px;
   height: 100px;
   border-radius: 50%;

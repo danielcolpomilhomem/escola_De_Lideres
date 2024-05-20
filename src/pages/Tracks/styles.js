@@ -12,6 +12,8 @@ export default Screen = styled.div`
   display: flex;
   flex-direction: row;
   background-color: var(--color-background-dash);
+  overflow-x: hidden;
+
 
   .content-side-tracks {
     width: 100%;
@@ -27,6 +29,8 @@ export default Screen = styled.div`
     justify-content: start;
     overflow-y: auto;
     gap: 3rem;
+
+
     .title-container {
       width: 100%;
       height: 50px;
@@ -47,12 +51,25 @@ export default Screen = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
+
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
   }
   .bottom-div-left {
     width: 75%;
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 500px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 96vw;
+    }
 
     .ativity-projects {
       padding: 1.2rem;
@@ -77,6 +94,7 @@ export default Screen = styled.div`
         background-color: var(--color-background-white-mode);
         border-radius: 15px;
         padding: 0rem 1.5rem;
+        
 
         .main-container {
           width: 100%;
@@ -126,6 +144,10 @@ export default Screen = styled.div`
     display: flex;
     align-items: start;
     justify-content: center;
+
+    @media (max-width: 500px) {
+      width: 95vw;
+    }
 
     .suport-material {
       display: flex;

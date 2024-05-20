@@ -50,13 +50,13 @@ const AsideMenu = () => {
   const [propsAside, setPropsAside] = useState("0%");
 
   const handleClick = () => {
-    setPropsAside(propsAside === "0%" ? "-60%" : "0%");
+    setPropsAside(propsAside === "0%" ? "-235px" : "0%");
   };
 
   if (window.innerWidth <= 500) {
     useEffect(() => {
       console.log("teste");
-      setPropsAside("-60%");
+      setPropsAside("-235px");
     }, [location.pathname]);
   }
 
@@ -70,7 +70,7 @@ const AsideMenu = () => {
         onClick={handleClick}
         className="button-reveal"
         style={{
-          transform: propsAside === "-60%" ? "rotate(180deg)" : "rotate(0)",
+          transform: propsAside === "-235px" ? "rotate(180deg)" : "rotate(0)",
         }}
       >
         <RxDoubleArrowLeft />

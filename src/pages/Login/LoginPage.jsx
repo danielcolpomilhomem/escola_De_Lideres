@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { LoginScreen } from "./styles";
-import LoginComponent from "../../components/LoginComponent/LoginComponent";
-import { RecoveryComponent } from "../../components/LoginComponent/RecoveryPassComponent";
-import { RecoveryAcessComponent } from "../../components/LoginComponent/RecoveryAcessComponent";
+import LoginComponent from "./Forms/LoginComponent";
+import { RecoveryComponent } from "./Forms/RecoveryPassComponent";
+import { RecoveryAcessComponent } from "./Forms/RecoveryAcessComponent";
 
 import LogoEscola from "../../assets/LogoEscola.svg";
 
